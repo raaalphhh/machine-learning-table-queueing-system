@@ -34,7 +34,7 @@ It was built to improve **efficiency and fairness** in seating management, espec
 | Dependencies | NumPy, OpenCV, time, math |
 | IDE | Visual Studio Code / Jupyter Notebook |
 
----
+```
 
 ## 📁 Project Structure
 Machine-Learning-Table-Queueing-System/
@@ -52,8 +52,7 @@ Machine-Learning-Table-Queueing-System/
 │ └── eatery5.mp4 # Sample test video (not included)
 │
 └── README.md
-
----
+```
 
 ## 🧩 How It Works
 
@@ -78,19 +77,22 @@ Machine-Learning-Table-Queueing-System/
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone this Repository
-
-git clone https://github.com/raaalphhh/machine-learning-table-queueing-system.git
+```bash
+git clone https://github.com/<your-username>/machine-learning-table-queueing-system.git
 cd machine-learning-table-queueing-system
-
 2️⃣ Install Dependencies
-
 Make sure Python is installed, then run:
-pip install opencv-python numpy
 
+bash
+Copy code
+pip install opencv-python numpy
 3️⃣ Download YOLOv4 Model Files
 You’ll need:
+
 yolov4.weights
+
 yolov4.cfg
+
 classes.txt
 
 You can download YOLOv4 pretrained weights from:
@@ -100,30 +102,49 @@ Place them inside the dnn_model/ folder.
 
 ▶️ Run the System
 Use your terminal or command prompt:
-python main.py
 
+bash
+Copy code
+python main.py
 If you want to use a different video:
+
+bash
+Copy code
 python main.py --video path/to/your/video.mp4
 
 🔬 Example Applications
+
 Restaurant or cafeteria queue management
+
 Smart cafeteria monitoring systems
+
 Real-time occupancy detection for space optimization
+
 Integration with booking or self-seating systems
 
 💡 Future Improvements
+
 Replace YOLOv4 with YOLOv8 for faster performance
+
 Add multi-camera support for large spaces
+
 Integrate with a web dashboard for live seat status
+
 Deploy model using TensorRT or ONNX for edge devices (e.g., Jetson Nano)
 
 ⚠️ Notes
-If the system runs slowly on your computer, reduce frame size in main.py by adjusting:
+
+If the system runs slowly on your computer:
+
+Reduce frame size in main.py by adjusting:
+
 resize_scale = 0.5  # Lower value for faster processing
+
 
 Use GPU acceleration (CUDA) if available in OpenCV.
 
 📜 License
+
 This project is open-source and intended for educational and research purposes under the MIT License.
 
 👨‍💻 Developer: Ralph Buenaventura
