@@ -10,7 +10,7 @@ The system identifies available and occupied tables to help automate seat alloca
 This project applies **machine learning and image processing** to analyze live video feeds from a restaurant or cafeteria.  
 Using the **YOLOv4** deep learning model, the system detects objects such as `dining tables`, `chairs`, and `people` to determine whether a table is **available** or **occupied**.
 
-It was built to improve **efficiency and fairness** in seating management, especially in high-traffic dining environments.
+It was built for prototype purposes using a sample video (eatery5.mp4), but can also be extended to use live camera feeds (e.g., CCTV or webcam) with minor modifications.
 
 ---
 
@@ -25,14 +25,15 @@ It was built to improve **efficiency and fairness** in seating management, espec
 
 ## 🧰 Technologies Used
 
-| Category | Tools / Libraries |
-|-----------|-------------------|
-| Programming Language | Python |
-| Machine Learning | YOLOv4 (Darknet model) |
-| Framework | OpenCV DNN |
-| Object Tracking | Custom centroid-based tracker |
-| Dependencies | NumPy, OpenCV, time, math |
-| IDE | Visual Studio Code / Jupyter Notebook |
+| Category             | Tools / Libraries                               |
+| -------------------- | ----------------------------------------------- |
+| Programming Language | Python                                          |
+| Machine Learning     | YOLOv4 (Darknet model)                          |
+| Framework            | OpenCV DNN                                      |
+| Object Tracking      | Custom centroid-based tracker                   |
+| Dependencies         | NumPy, OpenCV, time, math                       |
+| IDE                  | Visual Studio Code / PyCharm / Jupyter Notebook |
+
 
 ```
 
@@ -80,19 +81,19 @@ Machine-Learning-Table-Queueing-System/
 ```bash
 git clone https://github.com/<your-username>/machine-learning-table-queueing-system.git
 cd machine-learning-table-queueing-system
+
 2️⃣ Install Dependencies
 Make sure Python is installed, then run:
 
 bash
 Copy code
 pip install opencv-python numpy
+
 3️⃣ Download YOLOv4 Model Files
 You’ll need:
 
 yolov4.weights
-
 yolov4.cfg
-
 classes.txt
 
 You can download YOLOv4 pretrained weights from:
@@ -100,17 +101,22 @@ https://pjreddie.com/darknet/yolo/
 
 Place them inside the dnn_model/ folder.
 
-▶️ Run the System
-Use your terminal or command prompt:
-
-bash
-Copy code
+▶️ Running the System
+🧩 Option 1: Use a Sample Video (Prototype Mode)
 python main.py
-If you want to use a different video:
 
-bash
-Copy code
+By default, the code uses the eatery5.mp4 file as input.
+
+🧩 Option 2: Use a Custom Video
 python main.py --video path/to/your/video.mp4
+
+🧩 Option 3: Use a Live Camera Feed (Optional Enhancement)
+
+If you want to use a webcam or CCTV instead of a saved video, modify this line in main.py:
+
+cap = cv2.VideoCapture(0)  # Use 0 for default webcam
+
+⚠️ Only a few minor code edits are needed — the detection logic remains the same.
 
 🔬 Example Applications
 
@@ -139,7 +145,6 @@ If the system runs slowly on your computer:
 Reduce frame size in main.py by adjusting:
 
 resize_scale = 0.5  # Lower value for faster processing
-
 
 Use GPU acceleration (CUDA) if available in OpenCV.
 
