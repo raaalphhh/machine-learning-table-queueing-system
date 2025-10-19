@@ -77,7 +77,7 @@ Machine-Learning-Table-Queueing-System/
 
 ## ⚙️ Installation & Setup
 ```
-### 1️⃣ Clone this Repository
+1️⃣ Clone this Repository
 git clone https://github.com/<your-username>/machine-learning-table-queueing-system.git
 cd machine-learning-table-queueing-system
 
@@ -153,6 +153,8 @@ Use GPU acceleration (CUDA) if available in OpenCV.
 This project is open-source and intended for educational and research purposes under the MIT License.
 ```
 ### 👨‍💻 Developer: Ralph Buenaventura
+```
 🎓 Bachelor of Science in Computer Engineering
 📍 Philippines
 🔗 https://github.com/raaalphhh
+```
