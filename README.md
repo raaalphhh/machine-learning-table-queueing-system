@@ -56,7 +56,7 @@ Machine-Learning-Table-Queueing-System/
 ```
 
 ## 🧩 How It Works
-
+```
 1. **Load YOLOv4 Model**  
    The system loads pretrained YOLOv4 weights and configuration using OpenCV’s DNN module.
 
@@ -73,12 +73,11 @@ Machine-Learning-Table-Queueing-System/
 5. **Display Output**  
    The system draws bounding boxes and labels (“Available” or “Occupied”) around tables in real time.
 
----
+```
 
 ## ⚙️ Installation & Setup
-
+```
 ### 1️⃣ Clone this Repository
-```bash
 git clone https://github.com/<your-username>/machine-learning-table-queueing-system.git
 cd machine-learning-table-queueing-system
 
@@ -117,9 +116,10 @@ If you want to use a webcam or CCTV instead of a saved video, modify this line i
 cap = cv2.VideoCapture(0)  # Use 0 for default webcam
 
 ⚠️ Only a few minor code edits are needed — the detection logic remains the same.
+```
 
-🔬 Example Applications
-
+## 🔬 Example Applications
+```
 Restaurant or cafeteria queue management
 
 Smart cafeteria monitoring systems
@@ -127,9 +127,9 @@ Smart cafeteria monitoring systems
 Real-time occupancy detection for space optimization
 
 Integration with booking or self-seating systems
-
-💡 Future Improvements
-
+```
+## 💡 Future Improvements
+```
 Replace YOLOv4 with YOLOv8 for faster performance
 
 Add multi-camera support for large spaces
@@ -137,9 +137,9 @@ Add multi-camera support for large spaces
 Integrate with a web dashboard for live seat status
 
 Deploy model using TensorRT or ONNX for edge devices (e.g., Jetson Nano)
-
-⚠️ Notes
-
+```
+## ⚠️ Notes
+```
 If the system runs slowly on your computer:
 
 Reduce frame size in main.py by adjusting:
@@ -147,12 +147,12 @@ Reduce frame size in main.py by adjusting:
 resize_scale = 0.5  # Lower value for faster processing
 
 Use GPU acceleration (CUDA) if available in OpenCV.
-
-📜 License
-
+```
+## 📜 License
+```
 This project is open-source and intended for educational and research purposes under the MIT License.
-
-👨‍💻 Developer: Ralph Buenaventura
+```
+### 👨‍💻 Developer: Ralph Buenaventura
 🎓 Bachelor of Science in Computer Engineering
 📍 Philippines
 🔗 https://github.com/raaalphhh
